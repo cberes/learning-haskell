@@ -56,6 +56,13 @@ a `compare'` b
     | a < b     = LT
     | otherwise = GT
 
+-- can fall through to another definition
+take' :: (Num i, Ord i) => i -> [a] -> [a]
+take' n _
+    | n <= 0 = []
+take' _ [] = []
+take' n (x:xs) = x : take' (n-1) xs
+
 -- where
 
 bmiTell :: Double -> Double -> String
