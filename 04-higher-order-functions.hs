@@ -18,6 +18,8 @@ foldl
 foldr  -- foldr works with infinite lists
 foldl1 -- like fold left but uses the first value as the accumulator
 foldr1 -- so you cannot use these with empty lists
+foldl' -- strict version of foldl (values are stored rather than chains of functions to get those values)
+foldr'
 scanl  -- like foldl but returns a list of intermediate values (final value is last)
 scanr  -- final value is first
 
